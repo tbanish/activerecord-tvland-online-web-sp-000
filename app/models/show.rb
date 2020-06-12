@@ -4,11 +4,11 @@ class Show < ActiveRecord::Base
   belongs_to :network
   
   def actors_list
-    array = []
+    actors = []
     self.characters.each do |n|
-      array << "#{n.actor.first_name} #{n.actor.last_name}"
+      actors << "#{n.actor.first_name} #{n.actor.last_name}"
     end
-    array
+    actors
   end
   
 end
